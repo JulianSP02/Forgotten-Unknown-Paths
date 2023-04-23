@@ -24,6 +24,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     float gravityMultiplier = 3.0F;
 
+    [Header("Animation")]
+    [SerializeField]
+    Animator animator; 
+
     CharacterController character;
 
     Vector3 direction;
