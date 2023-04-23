@@ -1237,6 +1237,7 @@ GameObject:
   - component: {fileID: 2885017914296876976}
   - component: {fileID: 2885017914296876977}
   - component: {fileID: 4813417200625027827}
+  - component: {fileID: 4261590004961813183}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1310,6 +1311,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965f8e9f61f61b640bfea7fc3aab71b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+--- !u!65 &4261590004961813183
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885017914296876991}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.79, y: 1.79, z: 0.54}
+  m_Center: {x: 0, y: 0.89, z: 0}
 --- !u!1 &2893898732815762706
 GameObject:
   m_ObjectHideFlags: 0
