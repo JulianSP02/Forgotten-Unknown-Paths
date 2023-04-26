@@ -10,10 +10,7 @@ public class DanoEnemy : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-
-            SceneManager.LoadScene
-               (SceneManager.GetActiveScene().buildIndex);
-
+            SceneManager.LoadScene("GameOver");
         }
 
     }

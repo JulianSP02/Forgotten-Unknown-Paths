@@ -65,7 +65,10 @@ public class PlayerController : MonoBehaviour
         inputZ = Input.GetAxisRaw("Vertical");
 
         isMovePressed = inputX != 0.0F || inputZ != 0.0F;
+
         isRunning = Input.GetButton("Fire3");
+        animator.SetBool("isRunning", true);
+
         isJumpPressed = Input.GetButtonDown("Jump");
     }
 
@@ -117,6 +120,7 @@ public class PlayerController : MonoBehaviour
 
         velocity.y = velocityY;
         character.Move(velocity * Time.deltaTime);
+        animator.SetBool("isMovePressed", true);
     }
 
     void HandleRotation()
