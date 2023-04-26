@@ -10,6 +10,11 @@ public class PatrolController : MonoBehaviour
     public Transform jugador;
     public float velocidad;
 
+    [Header("Animation")]
+    [SerializeField]
+    Animator animator;
+
+
     void Update()
     {
         estarAlerta = Physics.CheckSphere(transform.position, rangoDeAlerta, capaDelJugador);
@@ -22,6 +27,12 @@ public class PatrolController : MonoBehaviour
             transform.position = Vector3.MoveTowards
                 (transform.position, posJugador
                 , velocidad * Time.deltaTime);
+            animator.SetBool("isRunning", true);
+
+        }
+        else
+        {
+            animator.SetBool("isRunning", false);
 
         }
     }
@@ -32,7 +43,4 @@ public class PatrolController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, rangoDeAlerta);
     }
 
-    [Header("Animation")]
-    [SerializeField]
-    Animation animator;
 }
