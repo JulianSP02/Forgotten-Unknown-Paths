@@ -1149,7 +1149,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2650594126264481466}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 14328e31dae469247a19fb01f1f5ab00, type: 3}
   m_Controller: {fileID: 9100000, guid: 9ebec45820db6294d97abf2511ce0d87, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
@@ -1235,12 +1235,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2885017914296876990}
   - component: {fileID: 2885017914296876976}
-  - component: {fileID: 2885017914296876977}
   - component: {fileID: 4813417200625027827}
   - component: {fileID: 4261590004961813183}
+  - component: {fileID: 1547692968}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1277,28 +1277,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!195 &2885017914296876977
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2885017914296876991}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.28
-  m_Speed: 1.8
-  m_Acceleration: 5
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1.81
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!114 &4813417200625027827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1311,7 +1289,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 965f8e9f61f61b640bfea7fc3aab71b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  rangoDeAlerta: 9
+  capaDelJugador:
+    serializedVersion: 2
+    m_Bits: 8
+  jugador: {fileID: 0}
+  velocidad: 5
+  animator: {fileID: 8746888950837589626}
 --- !u!65 &4261590004961813183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1325,6 +1309,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.79, y: 1.79, z: 0.54}
   m_Center: {x: 0, y: 0.89, z: 0}
+--- !u!136 &1547692968
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885017914296876991}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.38
+  m_Height: 2.03
+  m_Direction: 1
+  m_Center: {x: 0.01, y: 0.79, z: 0}
 --- !u!1 &2893898732815762706
 GameObject:
   m_ObjectHideFlags: 0

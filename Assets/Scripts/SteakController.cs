@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SteakController : MonoBehaviour
 {
-    public int win = 7;
-
     void OnTriggerEnter(Collider other)
     {
         PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
@@ -15,7 +13,7 @@ public class SteakController : MonoBehaviour
         {
             playerInventory.SteakCollected();
             gameObject.SetActive(false);
-        }if(playerInventory.steakNumber == 7)
+        }if(playerInventory.steakNumber == 13)
         {
             SceneManager.LoadScene("Victory");
         }
