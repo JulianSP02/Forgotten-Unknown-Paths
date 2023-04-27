@@ -30,16 +30,16 @@ public class DanoEnemy : MonoBehaviour
     Animator animator7;
     void OnTriggerEnter(Collider other)
     {
-        animator.SetBool("isCatch", true);
-        animator2.SetBool("isCatch", true);
-        animator3.SetBool("isCatch", true);
-        animator4.SetBool("isCatch", true);
-        animator5.SetBool("isCatch", true);
-        animator6.SetBool("isCatch", true);
-        animator7.SetBool("isCatch", true);
 
         if (other.CompareTag("Enemy"))
         {
+            animator.SetBool("isCatch", true);
+            animator2.SetBool("isCatch", true);
+            animator3.SetBool("isCatch", true);
+            animator4.SetBool("isCatch", true);
+            animator5.SetBool("isCatch", true);
+            animator6.SetBool("isCatch", true);
+            animator7.SetBool("isCatch", true);
             SceneManager.LoadScene("GameOver");
         }
 

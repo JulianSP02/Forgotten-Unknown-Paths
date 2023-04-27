@@ -15,7 +15,7 @@ public class SteakController : MonoBehaviour
         {
             playerInventory.SteakCollected();
             gameObject.SetActive(false);
-        }if(playerInventory.steakNumber == 20)
+        }if(playerInventory.steakNumber == 7)
         {
             SceneManager.LoadScene("Victory");
         }
